@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::4269" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "name": "Hayden, ID" }, "geometry": { "type": "Point", "coordinates": [ -116.7856, 47.7661 ] } },
+{ "type": "Feature", "properties": { "name": "Pilchuck, WA" }, "geometry": { "type": "Point", "coordinates": [ -121.7967, 48.0578 ] } },
+{ "type": "Feature", "properties": { "name": "Jefferson, OR" }, "geometry": { "type": "Point", "coordinates": [ -121.2356, 44.5792 ] } },
+{ "type": "Feature", "properties": { "name": "Clarksburg, CA" }, "geometry": { "type": "Point", "coordinates": [ -121.5272, 38.4206 ] } }
+]
+}

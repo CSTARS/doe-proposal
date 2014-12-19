@@ -1,0 +1,8 @@
+<OGRVRTDataSource>
+   <OGRVRTLayer name="fields">
+       <SrcDataSource>PG:service=doe</SrcDataSource>
+       <SrcLayer>fields</SrcLayer>
+       <GeometryField field="wkb_geometry" name="centroid"/>
+       <Field name="name" src="name" type="STRING"/>
+    </OGRVRTLayer>
+</OGRVRTDataSource>
