@@ -5,7 +5,7 @@
 "features": [
 { "type": "Feature", "properties": { "name": "Hayden, ID" }, "geometry": { "type": "Point", "coordinates": [ -116.7856, 47.7661 ] } },
 { "type": "Feature", "properties": { "name": "Pilchuck, WA" }, "geometry": { "type": "Point", "coordinates": [ -121.7967, 48.0578 ] } },
-{ "type": "Feature", "properties": { "name": "Jefferson, OR" }, "geometry": { "type": "Point", "coordinates": [ -121.2356, 44.5792 ] } },
-{ "type": "Feature", "properties": { "name": "Clarksburg, CA" }, "geometry": { "type": "Point", "coordinates": [ -121.5272, 38.4206 ] } }
+{ "type": "Feature", "properties": { "name": "Jefferson, OR" }, "geometry": { "type": "Point", "coordinates": [ -122.956123931165791, 44.693241095544103 ] } },
+{ "type": "Feature", "properties": { "name": "Clarksbug, CA" }, "geometry": { "type": "Point", "coordinates": [ -121.5272, 38.4206 ] } }
 ]
 }
