@@ -5,4 +5,11 @@
        <GeometryField field="wkb_geometry" name="centroid"/>
        <Field name="name" src="name" type="STRING"/>
     </OGRVRTLayer>
+
+  <OGRVRTLayer name="hucs">
+       <SrcDataSource>PG:service=doe</SrcDataSource>
+       <SrcLayer>field_hucs</SrcLayer>
+       <GeometryField field="wkb_geometry" name="centroid"/>
+</OGRVRTLayer>
+		
 </OGRVRTDataSource>
