@@ -1,0 +1,51 @@
+<OGRVRTDataSource>
+ <OGRVRTWarpedLayer>
+   <OGRVRTLayer name="HUC2">
+       <SrcDataSource relativeToVRT="1">WBDHU2.shp</SrcDataSource>
+       <SrcSQL>select Name,HUC2 from WBDHU2 where HUC2 like '17%' or HUC2 like '18%'</SrcSQL>
+    </OGRVRTLayer>
+<TargetSRS>epsg:4326</TargetSRS>
+</OGRVRTWarpedLayer>
+
+ <OGRVRTWarpedLayer>
+   <OGRVRTLayer name="HUC4">
+       <SrcDataSource relativeToVRT="1">WBDHU4.shp</SrcDataSource>
+       <SrcSQL>select Name,HUC4 from WBDHU4 where HUC4 like '17%' or HUC4 like '18%'</SrcSQL>
+    </OGRVRTLayer>
+<TargetSRS>epsg:4326</TargetSRS>
+</OGRVRTWarpedLayer>
+
+ <OGRVRTWarpedLayer>
+   <OGRVRTLayer name="HUC6">
+       <SrcDataSource relativeToVRT="1">WBDHU6.shp</SrcDataSource>
+       <SrcSQL>select Name,HUC6 from WBDHU6 where HUC6 like '17%' or HUC6 like '18%'</SrcSQL>
+    </OGRVRTLayer>
+<TargetSRS>epsg:4326</TargetSRS>
+</OGRVRTWarpedLayer>
+
+ <OGRVRTWarpedLayer>
+   <OGRVRTLayer name="HUC8">
+       <SrcDataSource relativeToVRT="1">WBDHU8.shp</SrcDataSource>
+       <SrcSQL>select Name,HUC8 from WBDHU8 where HUC8 like '17%' or HUC8 like '18%'</SrcSQL>
+    </OGRVRTLayer>
+<TargetSRS>epsg:4326</TargetSRS>
+</OGRVRTWarpedLayer>
+
+ <OGRVRTWarpedLayer>
+   <OGRVRTLayer name="HUC10">
+       <SrcDataSource relativeToVRT="1">WBDHU10.shp</SrcDataSource>
+       <SrcSQL>select Name,HUC10 from WBDHU10 where HUC10 like '17%' or HUC10 like '18%'</SrcSQL>
+    </OGRVRTLayer>
+<TargetSRS>epsg:4326</TargetSRS>
+</OGRVRTWarpedLayer>
+
+ <OGRVRTWarpedLayer>
+   <OGRVRTLayer name="HUC12">
+       <SrcDataSource relativeToVRT="1">WBDHU12.shp</SrcDataSource>
+       <SrcSQL>select Name,HUC12 from WBDHU12 where HUC12 like '17%' or HUC12 like '18%'</SrcSQL>
+    </OGRVRTLayer>
+<TargetSRS>epsg:4326</TargetSRS>
+</OGRVRTWarpedLayer>
+
+
+</OGRVRTDataSource>
