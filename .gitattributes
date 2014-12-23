@@ -1,5 +1,8 @@
 *.shp binary
 *.shx binary
+*/gdb/*/cell/* binary
+nhd-wbd/ export-ignore
+gdb/ export-ignore
 src/ export-ignore
 Makefile export-ignore
 .gitattributes export-ignore
