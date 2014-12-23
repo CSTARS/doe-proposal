@@ -1,8 +1,3 @@
-ls
-g.list type=rast mapset=XXXX-01
-r.info nrel@XXXX-01
-r.info Rso@XXXX-01
-r.info global@XXXX-01
 r.info nrel@XXXX-01
 seq --help
 seq -g0.02 1 12
@@ -2998,3 +2993,8 @@ pwd
 cd doe-proposal/
 git add gdb
 git status
+g.list rast
+g.mapset clarksburk
+g.mapset clarksburg
+ls -l tif/*
+cd 
