@@ -1,65 +1,3 @@
-for y in 2012 2013 2014 2015 2016; do for m in 03 06 09 12; do for f in Ws; do eval `r.info -r ${f}@${y}-${m}`; echo ${y}-${m} ${min} ${max}; done; done; done
-for y in 2012 2013 2014 2015 2016; do for m in 03 06 09 12; do for f in WS; do eval `r.info -r ${f}@${y}-${m}`; echo ${y}-${m} ${min} ${max}; done; done; done
-for y in 2012 2013 2014 2015 2016; do for m in 03 06 09 12; do for f in LAI; do eval `r.info -r ${f}@${y}-${m}`; echo ${y}-${m} ${min} ${max}; done; done; done
-g.list rast
-for y in 2012 2013 2014 2015 2016; do for m in 03 06 09 12; do for f in PhysMod; do eval `r.info -r ${f}@${y}-${m}`; echo ${y}-${m} ${min} ${max}; done; done; done
-for y in 2012 2013 2014 2015 2016; do for m in 03 06 09 12; do g.mapset ${y}-${m}; r.colors map=PhysMod color=grey1.0; r.out.png input=PhysMod output=~/PhysMod_${y}_${m}.png; done; done
-for m in 03 06 09 12; do for f in xPP; do eval `r.info -r ${f}@${y}-${m}`; echo XXXX-${m} ${min} ${max}; done; done;
-for m in 03 06 09 12; do for f in xPP; do eval `r.info -r ${f}@XXXX-${m}`; echo XXXX-${m} ${min} ${max}; done; done;
-r.info xPP@XXXX-03
-d.rast WS@2016-12
-d.legend --help
-d.legend map=WS@2016-12 at 0,50,0,5
-d.legend map=WS@2016-12 at=0,50,0,5
-d.legend map=WS@2016-12 at=0,100,0,5
-d.legend map=WS@2016-12 at=0,100,0,10
-d.erase
-d.legend map=WS@2016-12 at=0,100,0,10
-d.legend map=WS@2016-12 at=0,100,0,10 range=900,3000
-d.erase
-d.legend map=WS@2016-12 at=0,100,0,10 range=900,3000
-d.legend map=WS@2016-12 at=0,100,0,10 labelnum=6 range=1000,3000
-d.erase
-d.legend map=WS@2016-12 at=0,100,0,10 labelnum=6 range=1000,3000
-d.legend map=WS@2016-12 at=5,100,5,10 labelnum=6 range=1000,3000
-d.erase
-d.legend map=WS@2016-12 at=5,90,5,10 labelnum=6 range=1000,3000
-r.info WS@2016-12
-g.list rast
-g.list type=rast mapset=2012-03-01
-g.list type=rast mapset=2012-02-01
-g.list type=rast mapset=2014-02-01
-cd ../
-ls
-g.list type=rast mapset=2016-08
-g.list type=rast mapset=2016-08
-g.list type=rast mapset=2016-08
-r.info fAge
-r.info fAge@2016-08
-g.list type=rast mapset=2016-08
-r.info NPP@2016-08
-g.list type=rast mapset=XXXX-08
-r.what.rast input=nPP@2016-04
-r.what input=nPP@2016-04
-r.what input=NPP@2016-04
-r.what input=tdmean@XXXX-04,tdmax@XXXX-04,NPP@2016-04
-r.what input=tdmean@XXXX-04,tdmin@XXXX-04,NPP@2016-04
-r.what input=tdmean@XXXX-04,tmin@XXXX-04,NPP@2016-04
-ls -lrt
-cd .
-cd ..
-ls
-cd ../..
-ls
-ls -lrt
-cd m3pg
-ls
-ls -lrt
-less m3pg.mk
-g.list rast
-g.list type=rast mapset=nrel
-g.list type=rast mapset=xPP
-cd gdb/ahb-pnw
 ls
 g.list type=rast mapset=XXXX-01
 r.info nrel@XXXX-01
@@ -2998,3 +2936,65 @@ xmlstarlet sel -t -m GDALRasterAttributeTable/Row -v "concat(@index,':',F[5])" -
 xmlstarlet sel -t -m GDALRasterAttributeTable/Row -v "concat(@index,':',F[5])" -n ~/qjhart.postgis-data/cdl/2011_30m_cdls.att.xml 
 cd 
 ls
+g.mapset jefferson
+ls
+r.proj location=quercus
+ls quercus/
+r.proj location=quercus mapset=landfire -l
+r.proj location=quercus mapset=r1
+r.proj location=quercus mapset=r1 -l
+r.proj location=quercus mapset=landfire input=EVT 
+g.region -g
+r.proj --help
+r.proj location=quercus mapset=landfire input=EVT 
+g.mapsets -l
+for m in clarksburg hayden jefferson pilchuck; do g.mapset $m; g.region rast=cdl; r.proj location=quercus mapset=landfire input=EVT; done
+r.info EVT
+r.proj -c EVT
+r.stats -c EVT
+r.stats --help
+r.stats -l -c EVT
+d.mon start=x0
+d.rast landfire
+d.rast EVT
+r.out.gdal --help
+cd 
+cd ~/doe-proposal/
+ls
+cd tif
+cd shp
+sls
+ls
+ls -lrt
+g.list rast
+cd ..
+mkdir tif
+cd tif
+mkddir jefferson
+mkdir jefferson
+cd jefferson/
+ls
+g.gisenv
+cd ..
+mkdir pilchuck
+r.out.gdal
+r.out.gdal --help
+r.out.gdal input=EVT output=pilchuck/EVT.tif
+gdalinfo pilchuck/EVT.tif 
+gdalinfo pilchuck/EVT.tif  | less
+g.list rast
+g.list rast | cat -0
+g.list rast | cat -
+for m in clarksburg hayden jefferson pilchuck; do g.mapset $m; mkdir $m; g.region rast=cdl; for r in EVT cdl nlcd; do r.out.gdal input=$r output=$m/$r.tif; done; done
+ls -lr
+git add tif
+cd ..
+git add tif
+emacs .gitattributes 
+git status
+cd ..
+git add gdb
+pwd
+cd doe-proposal/
+git add gdb
+git status

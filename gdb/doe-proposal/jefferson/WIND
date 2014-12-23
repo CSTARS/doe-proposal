@@ -10,9 +10,9 @@ e-w resol:  32
 n-s resol:  32
 top:        1.000000000000000
 bottom:     0.000000000000000
-cols3:      8
-rows3:      9
+cols3:      2436
+rows3:      1774
 depths:     1
-e-w resol3: 9744
-n-s resol3: 6307.55555556
+e-w resol3: 32
+n-s resol3: 32
 t-b resol:  1

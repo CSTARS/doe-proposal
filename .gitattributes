@@ -1,5 +1,6 @@
 *.shp binary
 *.shx binary
+*.tif binary
 */gdb/*/cell/* binary
 nhd-wbd/ export-ignore
 gdb/ export-ignore
