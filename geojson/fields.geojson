@@ -3,9 +3,12 @@
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
                                                                                 
 "features": [
-{ "type": "Feature", "properties": { "name": "Hayden, ID" }, "geometry": { "type": "Point", "coordinates": [ -116.7856, 47.7661 ] } },
-{ "type": "Feature", "properties": { "name": "Pilchuck, WA" }, "geometry": { "type": "Point", "coordinates": [ -121.7967, 48.0578 ] } },
-{ "type": "Feature", "properties": { "name": "Jefferson, OR" }, "geometry": { "type": "Point", "coordinates": [ -122.956123931165791, 44.693241095544103 ] } },
-{ "type": "Feature", "properties": { "name": "Clarksbug, CA" }, "geometry": { "type": "Point", "coordinates": [ -121.5272, 38.4206 ] } }
+{ "type": "Feature", "properties": { "name": "Hayden, ID" }, "geometry": { "type": "Point", "coordinates": [ -116.845336, 47.792556 ] } },
+{ "type": "Feature", "properties": { "name": "Pilchuck, WA" }, "geometry": { "type": "Point", "coordinates": [ -122.227947, 48.272247 ] } },
+{ "type": "Feature", "properties": { "name": "Pilchuck, WA" }, "geometry": { "type": "Point", "coordinates": [ -122.2487, 48.276853 ] } },
+{ "type": "Feature", "properties": { "name": "Pilchuck, WA" }, "geometry": { "type": "Point", "coordinates": [ -122.246664, 48.296831 ] } },
+{ "type": "Feature", "properties": { "name": "Jefferson, OR" }, "geometry": { "type": "Point", "coordinates": [ -122.962083, 44.695519 ] } },
+{ "type": "Feature", "properties": { "name": "Clarksbug, CA" }, "geometry": { "type": "Point", "coordinates": [ -121.537781, 38.453867 ] } },
+{ "type": "Feature", "properties": { "name": "Columbus, MS" }, "geometry": { "type": "Point", "coordinates": [ -88.315425, 33.358228 ] } }
 ]
 }

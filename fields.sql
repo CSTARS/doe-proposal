@@ -2,10 +2,13 @@ create table fields as
 SELECT l.name,l.longitude,l.latitude
 FROM (
  VALUES
- ('Hayden, ID'::text,-116.7856,47.7661),
- ('Pilchuck, WA'::text,-121.7967,48.0578),
- ('Jefferson, OR'::text,-122.9561239311658,44.6932410955441),
- ('Clarksbug, CA'::text,-121.5272,38.4206)
+ ('Hayden, ID'::text,-116.845336,47.792556),
+ ('Pilchuck, WA'::text,-122.227947,48.272247),
+ ('Pilchuck, WA'::text,-122.248700,48.276853),
+ ('Pilchuck, WA'::text,-122.246664,48.296831),
+ ('Jefferson, OR'::text,-122.962083,44.695519),
+ ('Clarksbug, CA'::text,-121.537781,38.453867),
+ ('Columbus, MS'::text,-88.315425,33.358228)
  ) l(name, longitude, latitude);
 
 alter table fields add column wkb_geometry geometry(Point,4326);

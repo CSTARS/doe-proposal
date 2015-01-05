@@ -7,8 +7,9 @@ out:=fields hucs
 geojson:=$(patsubst %,geojson/%.geojson,${out})
 shp:=$(patsubst %,shp/%.shp,${out})
 
-fields:
-	ogr2ogr -f PostgreSQL -nln fields PG:"service=doe" PG:"service=afri" -sql 'select name,st_setsrid(st_makepoint(longitude,latitude),4269) as centroid from m3pgjs_fields.fields'
+# fields.sql has new input for field locations.
+#fields:
+#	ogr2ogr -f PostgreSQL -nln fields PG:"service=doe" PG:"service=afri" -sql 'select name,st_setsrid(st_makepoint(longitude,latitude),4269) as centroid from m3pgjs_fields.fields'
 
 geojson:${geojson}
 geojson/%.geojson:src/fields.vrt
