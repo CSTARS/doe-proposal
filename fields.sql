@@ -18,12 +18,13 @@ update fields set
 wkb_geometry=st_setsrid(st_makepoint(longitude,latitude),4326);
 update fields set centroid=st_transform(wkb_geometry,97260);
 
+
 create or replace view field_hucs as 
 with n as (
  select lower(regexp_replace(f.name,',.*','')) as field,
- huc8 as huc
+ huc12 as huc
  from fields f join
- huc8 h on st_intersects(st_transform(f.wkb_geometry,4269),h.wkb_geometry)
+ huc12 h on st_intersects(f.centroid,h.boundary)
  )
 --select field,2::integer as level,huc2 as huc,name,
 --boundary,wkb_geometry
@@ -39,11 +40,12 @@ from n join huc6 on (huc6=substring(huc,1,6))
 union
 select field,8::integer as level,huc8 as huc,name,
 boundary,wkb_geometry
-from n join huc8 on (huc8=huc)
+from n join huc8 on (huc8=substring(huc,1,8))
 union
 select field,10::integer as level,huc10 as huc,name,
 boundary,wkb_geometry
-from n join huc10 on (huc10 like huc||'%')
+from n join huc10 on (huc10=substring(huc,1,10))
+---from n join huc10 on (huc10 like huc||'%')
 union
 select field,12::integer as level,huc12 as huc,name,
 boundary,wkb_geometry
